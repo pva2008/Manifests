@@ -1,7 +1,7 @@
 apiVersion : v1
 kind: Pod
 metadata:
-  name: hello1
+  name: hello12
 spec:
   containers:
     - name : container-hello
