@@ -38,11 +38,13 @@ spec:
   - type: Resource
     resource:
       name: cpu
-      type: Utilization
-      averageUtilization: 70
+      target:
+        type: Utilization
+        averageUtilization: 70
   - type: Resource
     resource:
-      name: memory 
-      type: Utilization
-      averageUtilization: 80
+      name: memory
+      target: 
+        type: Utilization
+        averageUtilization: 80
 
