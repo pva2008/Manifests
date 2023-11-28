@@ -32,8 +32,8 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: my-web-deployment-autoscaling
-  minReplicas: 2
-  maxReplicas: 6
+  minReplicas: 22
+  maxReplicas: 30
   metrics:
   - type: Resource
     resource:
