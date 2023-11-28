@@ -18,6 +18,6 @@ spec:
     spec:
       containers:
         - name : cia-web
-          image: pva2008/k8sphp:version1
+          image: pva2008/k8sphp:version2
           ports:
             - containerPort: 80
