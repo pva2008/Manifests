@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: my-web-deployment-autoscaling-addservice
   labels:
-    app : my-k8s-deployment
+    app : my-k8s-deployment-addservice
 spec:
   selector:
     matchLabels:
@@ -32,13 +32,13 @@ spec:
   minReplicas: 12
   maxReplicas: 16
   metrics:
-   - type: Resource
+  - type: Resource
     resource:
       name: cpu
       target:
         type: Utilization
         averageUtilization: 70
-    - type: Resource
+  - type: Resource
     resource:
       name: memory
       target: 
