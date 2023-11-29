@@ -18,6 +18,13 @@ spec:
           image: pva2008/k8sphp:version2
           ports:
             - containerPort: 80
+          resources:
+            limits:
+              memory: 512Mi
+              cpu: "1"
+            requests:
+              memory: 56Mi
+              cpu: "0.1"
 
 ---
 apiVersion: autoscaling/v2
