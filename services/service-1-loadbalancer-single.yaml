@@ -37,5 +37,5 @@ spec:
       port      : 80  # Port on Load Balancer
       targetPort: 80  # Port on POD
   loadBalancerIP: 192.168.65.207
-  externalIPs: 192.168.65.207
+  #externalIPs: 192.168.65.207
   type: LoadBalancer
