@@ -62,3 +62,4 @@ spec:
       port      : 80  # Port on Load Balancer
       targetPort: 80  # Port on Pod
   type: LoadBalancer
+  
