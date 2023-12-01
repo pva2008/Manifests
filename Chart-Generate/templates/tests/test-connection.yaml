@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "Chart-Generate.fullname" . }}-test-connection"
+  labels:
+    {{- include "Chart-Generate.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": test
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args: ['{{ include "Chart-Generate.fullname" . }}:{{ .Values.service.port }}']
+  restartPolicy: Never
