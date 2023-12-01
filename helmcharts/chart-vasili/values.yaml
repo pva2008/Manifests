@@ -3,4 +3,4 @@
 container:
   image: pva2008/k8sphp:latest
 
-replicaCount: 2
+replicaCount: 4
