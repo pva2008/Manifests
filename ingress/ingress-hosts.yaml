@@ -1,4 +1,4 @@
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: ingress-hosts
@@ -8,27 +8,43 @@ spec:
   - host: www.s5.zzz
     http:
       paths:
-        - backend:
-           serviceName: main
-           servicePort: 80
-
+      backend:
+        service:
+          name: main
+          port: 
+            number: 80
+  - host: www.s5.zzz
+    http:
+      paths:
+      backend:
+        service:
+          name: main
+          port: 
+            number: 80
   - host: www.s6.zzz
     http:
       paths:
-        - backend:
-           serviceName: web1
-           servicePort: 80
-
-  - host: wwww.s7.zzz
+      backend:
+        service:
+          name: web1
+          port: 
+            number: 80
+  - host: www.s7.zzz
     http:
       paths:
-        - backend:
-           serviceName: web2
-           servicePort: 80
-
+      backend:
+        service:
+          name: web2
+          port: 
+            number: 80
   - host: www.cat.zzz
     http:
       paths:
-        - backend:
-           serviceName: tomcat
-           servicePort: 8080
+      backend:
+        service:
+          name: tomcat
+          port: 
+            number: 8080
+  
+
+
