@@ -8,6 +8,7 @@ spec:
     http:
       paths:
       - pathType: Prefix
+        path: "/"
         backend:
           service:
             name: main
@@ -17,8 +18,9 @@ spec:
     http:
       paths:
       - pathType: Prefix
+        path: "/"
         backend:
           service:
             name: tomcat
             port:
-              number: 8080
+              number: 80
