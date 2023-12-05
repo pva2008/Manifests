@@ -4,23 +4,23 @@ metadata:
   name: ingress-hosts
 spec:
   rules:
-  - host: "foo.bar.com"
+  - host: "www.s5.zzz"
     http:
       paths:
       - pathType: Prefix
         path: "/bar"
         backend:
           service:
-            name: service1
+            name: main
             port:
               number: 80
-  - host: "*.foo.com"
+  - host: "www.cat.zzz"
     http:
       paths:
       - pathType: Prefix
-        path: "/foo"
+        path: 
         backend:
           service:
-            name: service2
+            name: tomcat
             port:
-              number: 80
+              number: 8080
