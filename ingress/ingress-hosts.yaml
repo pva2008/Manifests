@@ -43,4 +43,4 @@ spec:
           service:
             name: tomcat
             port:
-              number: 80
+              number: 8080
