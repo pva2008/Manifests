@@ -2,49 +2,25 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: ingress-hosts
-
 spec:
   rules:
-  - host: www.s5.zzz
+  - host: "foo.bar.com"
     http:
       paths:
-      backend:
-        service:
-          name: main
-          port: 
-            number: 80
-  - host: www.s5.zzz
+      - pathType: Prefix
+        path: "/bar"
+        backend:
+          service:
+            name: service1
+            port:
+              number: 80
+  - host: "*.foo.com"
     http:
       paths:
-      backend:
-        service:
-          name: main
-          port: 
-            number: 80
-  - host: www.s6.zzz
-    http:
-      paths:
-      backend:
-        service:
-          name: web1
-          port: 
-            number: 80
-  - host: www.s7.zzz
-    http:
-      paths:
-      backend:
-        service:
-          name: web2
-          port: 
-            number: 80
-  - host: www.cat.zzz
-    http:
-      paths:
-      backend:
-        service:
-          name: tomcat
-          port: 
-            number: 8080
-  
-
-
+      - pathType: Prefix
+        path: "/foo"
+        backend:
+          service:
+            name: service2
+            port:
+              number: 80
