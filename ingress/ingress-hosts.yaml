@@ -14,6 +14,26 @@ spec:
             name: main
             port:
               number: 80
+  - host: "www.s6.zzz"
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: web1
+            port:
+              number: 80
+  - host: "www.s7.zzz"
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: web2
+            port:
+              number: 80
   - host: "www.cat.zzz"
     http:
       paths:
