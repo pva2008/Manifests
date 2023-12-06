@@ -4,7 +4,7 @@ metadata:
   name: ingress-paths
 spec:
   rules: 
-  - host: www.s8.zzz 
+  - host: s8.zzz 
     http:
       paths:
       - path: /page1
