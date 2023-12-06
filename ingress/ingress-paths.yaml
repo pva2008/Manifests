@@ -4,6 +4,15 @@ metadata:
   name: ingress-paths
 spec:
   rules: 
+  - http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: service3
+            port:
+              number: 80
   - host: "www.s5.zzz" 
     http:
       paths:
@@ -28,4 +37,5 @@ spec:
             name: web1
             port:
               number: 80
+      
 
