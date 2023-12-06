@@ -1,4 +1,4 @@
 cloneHtdocsFromGit:
      enabled   : true
-     repository: https://github.com/pva2008/Manifests/tree/main/simplewebpage
+     repository: https://github.com/adv4000/simplewebpage
      branch    : main
