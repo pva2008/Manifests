@@ -4,17 +4,17 @@ metadata:
   name: ingress-paths
 spec:
   rules: 
-  - host: "www.s5.zzz" 
+  - host: www.s5.zzz 
     http:
       paths:
-      - path: "/page1"
+      - path: /page1
         pathType: Prefix
         backend:
           service:
             name: webx
             port:
               number: 80 
-      - path: "/page2"
+      - path: /page2
         pathType: Prefix
         backend:
           service:
