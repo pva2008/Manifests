@@ -11,7 +11,7 @@ spec:
         path: /page1
         backend:
           service:
-            name: webx 
+            name: main 
             port:
               number: 80 
       - pathType: Prefix
