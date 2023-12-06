@@ -8,7 +8,7 @@ spec:
     http:
       paths:
       - pathType: Prefix
-        path: "/page1"
+        path: /page1
         backend:
           service:
             name: webx 
