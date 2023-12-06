@@ -4,31 +4,31 @@ metadata:
   name: ingress-hosts
 spec:
   rules:
-  - host: "www.s5.zzz"
+  - host: www.s5.zzz
     http:
       paths:
       - pathType: Prefix
-        path: "/"
+        path: /
         backend:
           service:
             name: main
             port:
               number: 80
-  - host: "www.s6.zzz"
+  - host: www.s6.zzz
     http:
       paths:
       - pathType: Prefix
-        path: "/"
+        path: /
         backend:
           service:
             name: web1
             port:
               number: 80
-  - host: "www.s7.zzz"
+  - host: www.s7.zzz
     http:
       paths:
       - pathType: Prefix
-        path: "/"
+        path: /
         backend:
           service:
             name: web2
@@ -38,7 +38,7 @@ spec:
     http:
       paths:
       - pathType: Prefix
-        path: "/"
+        path: /
         backend:
           service:
             name: tomcat
